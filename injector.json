@@ -1,0 +1,12 @@
+{
+  "stylevendors": [
+    "@bower/trowel-trowel-cards/src/scss/cards.scss"
+  ],
+  
+  "stylegui": [
+    "@bower/trowel-trowel-cards//cards-styleguide.scss"
+  ],
+  "templategui": [
+    "@bower/trowel-trowel-cards//cards-styleguide.html.twig"
+  ]
+}

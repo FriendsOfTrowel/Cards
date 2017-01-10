@@ -1,0 +1,40 @@
+{
+  "name": "trowel-cards",
+  "homepage": "https://github.com/FriendsOfTrowel/Cards",
+  "authors": [
+    "Loïc Goyet <loic@troopers.email>"
+  ],
+  "description": "The official Trowel Component for cards",
+  "main": [
+    "src/scss/cards.scss",
+    "src/twig/card.html.twig",
+    "injector.json"
+  ],
+  "keywords": [
+    "scss",
+    "css",
+    "twig",
+    "html",
+    "trowel",
+    "trowel-cards",
+    "card"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    ".bowerrc",
+    ".gitignore",
+    "gulpfile.js",
+    "package.json",
+    "sache.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FriendsOfTrowel/Cards.git"
+  },
+  "dependencies": {
+    "trowel-core": "^3.0.0"
+  }
+}

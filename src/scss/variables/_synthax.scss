@@ -1,0 +1,9 @@
+$cards--prefix: 'c' !default;
+$cards--synthax: (
+  'prefix': $cards--prefix,
+  'separator': (
+    'prefix': '-',
+    'element': '__',
+    'modifier': '--',
+  ),
+);
