@@ -36,5 +36,8 @@
   },
   "dependencies": {
     "trowel-core": "^3.0.0"
+  },
+  "resolutions": {
+    "trowel-core": "4.0.2"
   }
 }
