@@ -8,27 +8,24 @@
   }
 };
 
-$card--selector: selector--constructor($cards--synthax, 'card');
+$card--selector: selector(new 'card' with $cards--syntax);
 
-@include selector($card--selector) {
-  // @include declaration('-include-cards--mixin-example', $cards--var);
-  @include declaration('font-size', $cards--font-size);
-  @include declaration('font-family', $cards--font-family);
-  @include declaration('font-weight', $cards--font-weight);
-  @include declaration('text-transform', $cards--text-transform);
-  @include declaration('letter-spacing', $cards--letter-spacing);
-  @include declaration('line-height', $cards--line-height);
-  @include declaration('text-align', $cards--text-align);
-  @include declaration('text-decoration', $cards--text-decoration);
-  @include declaration('margin', $cards--margin);
-  @include declaration('border-width', $cards--border-width);
-  @include declaration('border-style', $cards--border-style);
-  @include declaration('border-color', $cards--border-color);
-  @include declaration('border-radius', $cards--border-radius);
-  @include declaration('color', $cards--color);
-  @include declaration('box-shadow', $cards--box-shadow);
-  @include declaration('background', $cards--background);
-  @include declaration('background-color', $cards--background-color);
-
-  @include block-generation($card--selector);
-}
+@include statement($card--selector,(
+    (font-size, $cards--font-size),
+    (font-family, $cards--font-family),
+    (font-weight, $cards--font-weight),
+    (text-transform, $cards--text-transform),
+    (letter-spacing, $cards--letter-spacing),
+    (line-height, $cards--line-height),
+    (text-align, $cards--text-align),
+    (text-decoration, $cards--text-decoration),
+    (margin, $cards--margin),
+    (border-width, $cards--border-width),
+    (border-style, $cards--border-style),
+    (border-color, $cards--border-color),
+    (border-radius, $cards--border-radius),
+    (color, $cards--color),
+    (box-shadow, $cards--box-shadow),
+    (background, $cards--background),
+    (background-color, $cards--background-color)
+));
