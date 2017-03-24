@@ -2,30 +2,24 @@
  * Cards
  */
 
-@mixin mixin-dispatcher($value, $flags, $mixin) {
-  @if $mixin == 'cards--mixin-example' {
-    @include cards--mixin-example($value, $flags);
-  }
-};
-
 $card--selector: selector(new 'card' with $cards--syntax);
 
-@include statement($card--selector,(
-    (font-size, $cards--font-size),
-    (font-family, $cards--font-family),
-    (font-weight, $cards--font-weight),
-    (text-transform, $cards--text-transform),
-    (letter-spacing, $cards--letter-spacing),
-    (line-height, $cards--line-height),
-    (text-align, $cards--text-align),
-    (text-decoration, $cards--text-decoration),
-    (margin, $cards--margin),
-    (border-width, $cards--border-width),
-    (border-style, $cards--border-style),
-    (border-color, $cards--border-color),
-    (border-radius, $cards--border-radius),
-    (color, $cards--color),
-    (box-shadow, $cards--box-shadow),
-    (background, $cards--background),
-    (background-color, $cards--background-color)
+@include statement($card--selector, (
+    ('font-size', $cards--font-size),
+    ('font-family', $cards--font-family),
+    ('font-weight', $cards--font-weight),
+    ('text-transform', $cards--text-transform),
+    ('letter-spacing', $cards--letter-spacing),
+    ('line-height', $cards--line-height),
+    ('text-align', $cards--text-align),
+    ('text-decoration', $cards--text-decoration),
+    ('margin', $cards--margin),
+    ('border-width', $cards--border-width),
+    ('border-style', $cards--border-style),
+    ('border-color', $cards--border-color),
+    ('border-radius', $cards--border-radius),
+    ('color', $cards--color),
+    ('box-shadow', $cards--box-shadow),
+    ('background', $cards--background),
+    ('background-color', $cards--background-color)
 ));
