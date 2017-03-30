@@ -13,18 +13,27 @@
 
         Cards
     </h1>
-    
-    <div class="card" style="width: 20rem;">
-      <div class="card__cover-wrapper">
-           <img class="card__cover" src="http://placehold.it/350x150" alt="Card image cap">
-      </div>
 
-       <div class="card__block">
-           <h4 class="card__title">Card title</h4>
-           <p class="card__text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-           <a href="#" class="btn btn-primary">Go somewhere</a>
+    {% set backgroundColors =  ['default','primary','success','info','warning', 'danger','inverted'] %}
+    {% for theme in backgroundColors %}
+        <h2>Card theme: {{theme}}</h2>
+
+        <h3>Cover card</h3>
+        <div class="card card--{{theme}}" style="width: 20rem;">
+          <div class="card__cover-wrapper">
+               <img class="card__cover" src="http://placehold.it/350x150" alt="Card image cap">
+          </div>
+
+           <div class="card__block">
+               <h4 class="card__title">Card title</h4>
+               <p class="card__text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
        </div>
-   </div>
-   {% include '../../src/twig/card.html.twig' %}
+
+       <h3>Simple card</h3>
+       {% include '../../src/twig/card.html.twig' with theme %}
+
+   {% endfor %}
   </body>
 </html>
