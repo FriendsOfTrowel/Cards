@@ -13,18 +13,18 @@
 
         Cards
     </h1>
-
+    
     <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
+      <div class="card__cover-wrapper">
+           <img class="card__cover" src="http://placehold.it/350x150" alt="Card image cap">
+      </div>
 
-        <div class="card-block">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-    {% include '../../src/twig/card.html.twig' %}
-
+       <div class="card__block">
+           <h4 class="card__title">Card title</h4>
+           <p class="card__text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           <a href="#" class="btn btn-primary">Go somewhere</a>
+       </div>
+   </div>
+   {% include '../../src/twig/card.html.twig' %}
   </body>
 </html>

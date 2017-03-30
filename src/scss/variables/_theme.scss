@@ -7,14 +7,25 @@ $cards--line-height: null !default;
 $cards--text-align: null !default;
 $cards--text-decoration: null !default;
 
-$cards--margin: null !default;
+$cards--margin: 10px;
 
-$cards--border-width: null !default;
-$cards--border-style: null !default;
-$cards--border-color: null !default;
-$cards--border-radius: null !default;
+$cards--border-width: 1px;
+$cards--border-style: solid;
+$cards--border-color: (
+  'default': darken(rgb(255, 255, 255), 10%),
+  '-inverted': lighten(rgb(31, 13, 51), 10%),
+);
+$cards--border-radius: 20px;
 
-$cards--color: null !default;
+$cards--color: (
+ 'default': rgb(31, 13, 51),
+ '-inverted': rgb(255,255,255),
+);
 $cards--box-shadow: null !default;
 $cards--background: null !default;
-$cards--background-color: null !default;
+$cards--background-color: (
+ 'default': rgb(255,255,255),
+ '-inverted': rgb(31, 13, 51),
+);
+
+$card-block--padding: 1rem;

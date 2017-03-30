@@ -1,4 +1,23 @@
 {# Here comes the card markup #}
 
-{% set selector_prefix = 'c-' %}
-<div class="{{ selector_prefix }}card">hello world !</div>
+<div class="card">
+  <div class="card__block">
+    <h4>Card</h4>
+    <div class="card__text">
+      <p>
+        hello world !
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="card card--inverted">
+  <div class="card__block">
+    <h4>Inverted card</h4>
+    <div class="card__text">
+      <p>
+        Wow, I'm so dark.
+      </p>
+    </div>
+  </p>
+</div>
