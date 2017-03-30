@@ -13,19 +13,47 @@ $cards--border-width: 1px;
 $cards--border-style: solid;
 $cards--border-color: (
   'default': darken(rgb(255, 255, 255), 10%),
-  '-inverted': lighten(rgb(31, 13, 51), 10%),
+  '-inverted': darken(rgb(31, 13, 51), 10%),
 );
 $cards--border-radius: 20px;
 
 $cards--color: (
- 'default': rgb(31, 13, 51),
- '-inverted': rgb(255,255,255),
+  'default': rgb(31, 13, 51),
+  '-primary': rgb(255, 255, 255),
+  '-success': rgb(255, 255, 255),
+  '-danger': rgb(255, 255, 255),
+  '-warning': rgb(255, 255, 255),
+  '-inverted': rgb(255,255,255),
 );
+
+$cards--background-color: (
+  'default': (
+    'default': rgb(255, 255, 255),
+    ':hover': darken(rgb(255, 255, 255), 2%),
+  ),
+  '-primary': (
+    'default': rgb(31, 13, 51),
+    ':hover':  darken(rgb(31, 13, 51), 2%),
+  ),
+  '-success': (
+    'default': rgb(55, 211, 189),
+    ':hover': darken(rgb(55, 211, 189), 2%),
+  ),
+  '-warning': (
+    'default': rgb(255, 176, 0),
+    ':hover': darken(rgb(255, 176, 0), 2%),
+  ),
+  '-danger': (
+    'default': rgb(253, 65, 100),
+    ':hover': darken(rgb(253, 65, 100), 2%),
+  ),
+  '-inverted': (
+    'default': rgb(31, 13, 51),
+    ':hover': darken(rgb(31, 13, 51), 2%),
+  ),
+);
+
 $cards--box-shadow: null !default;
 $cards--background: null !default;
-$cards--background-color: (
- 'default': rgb(255,255,255),
- '-inverted': rgb(31, 13, 51),
-);
 
 $card-block--padding: 1rem;
