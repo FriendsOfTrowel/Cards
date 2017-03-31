@@ -1,59 +1,59 @@
-$cards--font-size: null !default;
-$cards--font-family: null !default;
+// scss-lint:disable ColorVariable
+
+$cards--font-size: trwl-theme-size('md') !default;
+$cards--font-family: trwl-theme('font-family') !default;
 $cards--font-weight: null !default;
 $cards--text-transform: null !default;
 $cards--letter-spacing: null !default;
 $cards--line-height: null !default;
 $cards--text-align: null !default;
 $cards--text-decoration: null !default;
-
-$cards--margin: 10px;
-
-$cards--border-width: 1px;
-$cards--border-style: solid;
+$cards--height: null !default;
+$cards--margin: 0 0 2em !default;
+$cards--border-width: trwl-theme('border-width') !default;
+$cards--border-style: trwl-theme('border-style') !default;
 $cards--border-color: (
-  'default': darken(rgb(255, 255, 255), 10%),
-  '-inverted': darken(rgb(31, 13, 51), 10%),
-);
-$cards--border-radius: 20px;
-
-$cards--color: (
-  'default': rgb(31, 13, 51),
-  '-primary': rgb(255, 255, 255),
-  '-success': rgb(255, 255, 255),
-  '-danger': rgb(255, 255, 255),
-  '-warning': rgb(255, 255, 255),
-  '-inverted': rgb(255,255,255),
-);
-
-$cards--background-color: (
-  'default': (
-    'default': rgb(255, 255, 255),
-    ':hover': darken(rgb(255, 255, 255), 2%),
-  ),
-  '-primary': (
-    'default': rgb(31, 13, 51),
-    ':hover':  darken(rgb(31, 13, 51), 2%),
-  ),
-  '-success': (
-    'default': rgb(55, 211, 189),
-    ':hover': darken(rgb(55, 211, 189), 2%),
-  ),
-  '-warning': (
-    'default': rgb(255, 176, 0),
-    ':hover': darken(rgb(255, 176, 0), 2%),
-  ),
-  '-danger': (
-    'default': rgb(253, 65, 100),
-    ':hover': darken(rgb(253, 65, 100), 2%),
-  ),
-  '-inverted': (
-    'default': rgb(31, 13, 51),
-    ':hover': darken(rgb(31, 13, 51), 2%),
-  ),
-);
-
+  'default': trwl-theme-color('gray-medium'),
+  '-primary': trwl-theme-color('primary'),
+  '-success': trwl-theme-color('success'),
+  '-warning': trwl-theme-color('warning'),
+  '-danger': trwl-theme-color('danger'),
+) !default;
+$cards--border-radius: trwl-theme('border-radius') !default;
+$cards--color: trwl-theme('gray-darker') !default;
+$cards--background-color: rgb(255, 255, 255) !default;
 $cards--box-shadow: null !default;
 $cards--background: null !default;
 
-$card-block--padding: 1rem;
+$card-cover--height: 9.375em !default;
+
+$card-block--padding: 1em !default;
+$card-block--text-align: null !default;
+$card-block--flex-basis: null !default;
+$card-block--flex-shrink: null !default;
+$card-block--flex-grow: 1 !default;
+
+$card-heading--margin: 0 0 1em !default;
+$card-heading--font-size: null !default;
+$card-heading--font-weight: null !default;
+$card-heading--font-family: null !default;
+$card-heading--letter-spacing: null !default;
+$card-heading--line-height: null !default;
+$card-heading--text-align: null !default;
+$card-heading--text-decoration: null !default;
+$card-heading--color: (
+  '-primary': trwl-theme-color('primary'),
+  '-success': trwl-theme-color('success'),
+  '-warning': trwl-theme-color('warning'),
+  '-danger': trwl-theme-color('danger'),
+) !default;
+
+$card-paragraph--margin: 0 0 1em !default;
+$card-paragraph--font-size: null !default;
+$card-paragraph--font-weight: null !default;
+$card-paragraph--font-family: null !default;
+$card-paragraph--letter-spacing: null !default;
+$card-paragraph--line-height: null !default;
+$card-paragraph--text-align: null !default;
+$card-paragraph--text-decoration: null !default;
+$card-paragraph--color: null !default;
