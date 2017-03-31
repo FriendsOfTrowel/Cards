@@ -7,12 +7,12 @@ $cards--line-height: null !default;
 $cards--text-align: null !default;
 $cards--text-decoration: null !default;
 
-$cards--margin: 0 0 2em;
+$cards--margin: 0 0 2em !default;
 
-$cards--border-width: trwl-theme('border-width');
-$cards--border-style: trwl-theme('border-style');
-$cards--border-color: trwl-theme-color('gray-medium');
-$cards--border-radius: trwl-theme('border-radius');
+$cards--border-width: trwl-theme('border-width') !default;
+$cards--border-style: trwl-theme('border-style') !default;
+$cards--border-color: trwl-theme-color('gray-medium') !default;
+$cards--border-radius: trwl-theme('border-radius') !default;
 
 $cards--color: (
   'default': trwl-theme('gray-darker'),
@@ -21,7 +21,7 @@ $cards--color: (
   '-danger': rgb(255, 255, 255),
   '-warning': rgb(255, 255, 255),
   '-inverted': rgb(255, 255, 255),
-);
+) !default;
 
 $cards--background-color: (
   'default': (
@@ -44,9 +44,9 @@ $cards--background-color: (
     'default': trwl-theme-color('danger'),
     ':hover': darken(rgb(253, 65, 100), 2%),
   ),
-);
+) !default;
 
 $cards--box-shadow: null !default;
 $cards--background: null !default;
 
-$card-block--padding: 1em;
+$card-block--padding: 1em !default;
