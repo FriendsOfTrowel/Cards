@@ -1,4 +1,28 @@
-{# Here comes the card markup #}
+{% set modifiers = modifiers|default(false) %}
 
-{% set selector_prefix = 'c-' %}
-<div class="{{ selector_prefix }}card">hello world !</div>
+{% set modifiers_class = '' %}
+{% for modifier in modifiers %}
+    {% set modifiers_class = modifiers_class ~ ' ' ~ 'card--' ~ modifier %}
+{% endfor %}
+
+{% block card_wrapper %}
+    <div class="card{{ modifiers_class }}">
+        {% block card_inner %}
+            {% block card_cover_wrapper %}
+                {% if cover|default(false) %}
+                    <div class="card__cover-wrapper">
+                        {% block card_cover_inner %}
+                             <img class="card__cover" src="{{ cover }}">
+                         {% endblock card_cover_inner %}
+                    </div>
+                {% endif %}
+            {% endblock card_cover_wrapper %}
+
+            {% block card_block_wrapper %}
+                <div class="card__block">
+                    {% block card_block_inner %}{% endblock %}
+                </div>
+            {% endblock card_block_wrapper %}
+        {% endblock card_inner %}
+    </div>
+{% endblock card_wrapper %}

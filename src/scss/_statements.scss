@@ -2,33 +2,97 @@
  * Cards
  */
 
-@mixin mixin-dispatcher($value, $flags, $mixin) {
-  @if $mixin == 'cards--mixin-example' {
-    @include cards--mixin-example($value, $flags);
-  }
-};
+$card--selector: selector(new 'card' with $cards--syntax);
 
-$card--selector: selector--constructor($cards--synthax, 'card');
+@include statement($card--selector, (
+  ('font-size', $cards--font-size),
+  ('font-family', $cards--font-family),
+  ('font-weight', $cards--font-weight),
+  ('text-transform', $cards--text-transform),
+  ('letter-spacing', $cards--letter-spacing),
+  ('line-height', $cards--line-height),
+  ('text-align', $cards--text-align),
+  ('text-decoration', $cards--text-decoration),
+  ('margin', $cards--margin),
+  ('border-width', $cards--border-width),
+  ('border-style', $cards--border-style),
+  ('border-color', $cards--border-color),
+  ('border-radius', $cards--border-radius),
+  ('color', $cards--color),
+  ('overflow', hidden),
+  ('box-shadow', $cards--box-shadow),
+  ('height', $cards--height),
+  ('transition', background-color 0.5s ease),
+  ('display', flex),
+  ('flex-direction', column),
+  ('background-color', $cards--background-color),
+));
 
-@include selector($card--selector) {
-  // @include declaration('-include-cards--mixin-example', $cards--var);
-  @include declaration('font-size', $cards--font-size);
-  @include declaration('font-family', $cards--font-family);
-  @include declaration('font-weight', $cards--font-weight);
-  @include declaration('text-transform', $cards--text-transform);
-  @include declaration('letter-spacing', $cards--letter-spacing);
-  @include declaration('line-height', $cards--line-height);
-  @include declaration('text-align', $cards--text-align);
-  @include declaration('text-decoration', $cards--text-decoration);
-  @include declaration('margin', $cards--margin);
-  @include declaration('border-width', $cards--border-width);
-  @include declaration('border-style', $cards--border-style);
-  @include declaration('border-color', $cards--border-color);
-  @include declaration('border-radius', $cards--border-radius);
-  @include declaration('color', $cards--color);
-  @include declaration('box-shadow', $cards--box-shadow);
-  @include declaration('background', $cards--background);
-  @include declaration('background-color', $cards--background-color);
 
-  @include block-generation($card--selector);
+$card-block--selector: selector(set $card--selector element 'block');
+
+@include statement($card-block--selector, (
+  ('flex-grow', 1),
+  ('display', flex),
+  ('flex-direction', column),
+  ('justify-content', center),
+  ('padding', $card-block--padding),
+  ('text-align', $card-block--text-align),
+  ('flex-basis', $card-block--flex-basis),
+  ('flex-shrink', $card-block--flex-shrink),
+  ('flex-grow', $card-block--flex-grow),
+));
+
+#{print-selector($card-block--selector)} > *:first-child {
+  margin-top: 0;
 }
+
+#{print-selector($card-block--selector)} > *:last-child {
+  margin-bottom: 0;
+}
+
+
+$card-cover-wrapper--selector: selector(set $card--selector element 'cover-wrapper');
+
+@include statement($card-cover-wrapper--selector, (
+  ('height', $card-cover--height),
+));
+
+
+$card-cover--selector: selector(set $card--selector element 'cover');
+
+@include statement($card-cover--selector, (
+  ('object-fit', cover),
+  ('width', 100%),
+  ('height', 100%),
+));
+
+
+$card-heading--selector: selector(set $card--selector element 'heading');
+
+@include statement($card-heading--selector, (
+  ('margin', $card-heading--margin),
+  ('font-size', $card-heading--font-size),
+  ('font-weight', $card-heading--font-weight),
+  ('font-family', $card-heading--font-family),
+  ('letter-spacing', $card-heading--letter-spacing),
+  ('line-height', $card-heading--line-height),
+  ('text-align', $card-heading--text-align),
+  ('text-decoration', $card-heading--text-decoration),
+  ('color', $card-heading--color),
+));
+
+
+$card-paragraph--selector: selector(set $card--selector element 'paragraph');
+
+@include statement($card-paragraph--selector, (
+  ('margin', $card-paragraph--margin),
+  ('font-size', $card-paragraph--font-size),
+  ('font-weight', $card-paragraph--font-weight),
+  ('font-family', $card-paragraph--font-family),
+  ('letter-spacing', $card-paragraph--letter-spacing),
+  ('line-height', $card-paragraph--line-height),
+  ('text-align', $card-paragraph--text-align),
+  ('text-decoration', $card-paragraph--text-decoration),
+  ('color', $card-paragraph--color),
+));
