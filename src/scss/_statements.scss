@@ -20,7 +20,10 @@ $card--selector: selector(new 'card' with $cards--syntax);
   ('border-radius', $cards--border-radius),
   ('color', $cards--color),
   ('box-shadow', $cards--box-shadow),
+  ('height', $cards--height),
   ('transition', background-color 0.5s ease),
+  ('display', flex),
+  ('flex-direction', column),
   ('@include background-color--mixin', $cards--background-color),
 ));
 
@@ -29,13 +32,17 @@ $card-block--selector: selector(set $card--selector element 'block');
 
 @include statement($card-block--selector, (
   ('padding', $card-block--padding),
+  ('flex-grow', 1),
+  ('display', flex),
+  ('flex-direction', column),
+  ('justify-content', center),
 ));
 
 
 $card-cover-wrapper--selector: selector(set $card--selector element 'cover-wrapper');
 
 @include statement($card-cover-wrapper--selector, (
-  ('height', 150px),
+  ('height', $card-cover--height),
 ));
 
 

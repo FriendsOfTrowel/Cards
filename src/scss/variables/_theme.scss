@@ -8,14 +8,12 @@ $cards--letter-spacing: null !default;
 $cards--line-height: null !default;
 $cards--text-align: null !default;
 $cards--text-decoration: null !default;
-
+$cards--height: null !default;
 $cards--margin: 0 0 2em !default;
-
 $cards--border-width: trwl-theme('border-width') !default;
 $cards--border-style: trwl-theme('border-style') !default;
 $cards--border-color: trwl-theme-color('gray-medium') !default;
 $cards--border-radius: trwl-theme('border-radius') !default;
-
 $cards--color: (
   'default': trwl-theme('gray-darker'),
   '-primary': rgb(255, 255, 255),
@@ -24,7 +22,6 @@ $cards--color: (
   '-warning': rgb(255, 255, 255),
   '-inverted': rgb(255, 255, 255),
 ) !default;
-
 $cards--background-color: (
   'default': (
     'default': rgb(255, 255, 255),
@@ -47,8 +44,9 @@ $cards--background-color: (
     ':hover': darken(rgb(253, 65, 100), 2%),
   ),
 ) !default;
-
 $cards--box-shadow: null !default;
 $cards--background: null !default;
+
+$card-cover--height: 9.375em !default;
 
 $card-block--padding: 1em !default;
