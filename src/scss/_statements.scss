@@ -79,6 +79,7 @@ $card-heading--selector: selector(set $card--selector element 'heading');
   ('line-height', $card-heading--line-height),
   ('text-align', $card-heading--text-align),
   ('text-decoration', $card-heading--text-decoration),
+  ('color', $card-heading--color),
 ));
 
 
@@ -93,4 +94,5 @@ $card-paragraph--selector: selector(set $card--selector element 'paragraph');
   ('line-height', $card-paragraph--line-height),
   ('text-align', $card-paragraph--text-align),
   ('text-decoration', $card-paragraph--text-decoration),
+  ('color', $card-paragraph--color),
 ));

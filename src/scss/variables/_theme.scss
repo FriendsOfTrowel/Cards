@@ -12,23 +12,16 @@ $cards--height: null !default;
 $cards--margin: 0 0 2em !default;
 $cards--border-width: trwl-theme('border-width') !default;
 $cards--border-style: trwl-theme('border-style') !default;
-$cards--border-color: trwl-theme-color('gray-medium') !default;
-$cards--border-radius: trwl-theme('border-radius') !default;
-$cards--color: (
-  'default': trwl-theme('gray-darker'),
-  '-primary': rgb(255, 255, 255),
-  '-success': rgb(255, 255, 255),
-  '-danger': rgb(255, 255, 255),
-  '-warning': rgb(255, 255, 255),
-  '-inverted': rgb(255, 255, 255),
-) !default;
-$cards--background-color: (
-  'default': rgb(255, 255, 255),
+$cards--border-color: (
+  'default': trwl-theme-color('gray-medium'),
   '-primary': trwl-theme-color('primary'),
   '-success': trwl-theme-color('success'),
   '-warning': trwl-theme-color('warning'),
   '-danger': trwl-theme-color('danger'),
 ) !default;
+$cards--border-radius: trwl-theme('border-radius') !default;
+$cards--color: trwl-theme('gray-darker') !default;
+$cards--background-color: rgb(255, 255, 255) !default;
 $cards--box-shadow: null !default;
 $cards--background: null !default;
 
@@ -48,6 +41,12 @@ $card-heading--letter-spacing: null !default;
 $card-heading--line-height: null !default;
 $card-heading--text-align: null !default;
 $card-heading--text-decoration: null !default;
+$card-heading--color: (
+  '-primary': trwl-theme-color('primary'),
+  '-success': trwl-theme-color('success'),
+  '-warning': trwl-theme-color('warning'),
+  '-danger': trwl-theme-color('danger'),
+) !default;
 
 $card-paragraph--margin: 0 0 1em !default;
 $card-paragraph--font-size: null !default;
@@ -57,3 +56,4 @@ $card-paragraph--letter-spacing: null !default;
 $card-paragraph--line-height: null !default;
 $card-paragraph--text-align: null !default;
 $card-paragraph--text-decoration: null !default;
+$card-paragraph--color: null !default;
