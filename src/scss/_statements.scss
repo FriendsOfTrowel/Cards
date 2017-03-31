@@ -25,7 +25,7 @@ $card--selector: selector(new 'card' with $cards--syntax);
   ('transition', background-color 0.5s ease),
   ('display', flex),
   ('flex-direction', column),
-  ('@include background-color--mixin', $cards--background-color),
+  ('background-color', $cards--background-color),
 ));
 
 

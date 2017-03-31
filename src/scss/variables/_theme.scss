@@ -23,26 +23,11 @@ $cards--color: (
   '-inverted': rgb(255, 255, 255),
 ) !default;
 $cards--background-color: (
-  'default': (
-    'default': rgb(255, 255, 255),
-    ':hover': darken(rgb(255, 255, 255), 2%),
-  ),
-  '-primary': (
-    'default': trwl-theme-color('primary'),
-    ':hover':  darken(rgb(31, 13, 51), 2%),
-  ),
-  '-success': (
-    'default': trwl-theme-color('success'),
-    ':hover': darken(rgb(55, 211, 189), 2%),
-  ),
-  '-warning': (
-    'default': trwl-theme-color('warning'),
-    ':hover': darken(rgb(255, 176, 0), 2%),
-  ),
-  '-danger': (
-    'default': trwl-theme-color('danger'),
-    ':hover': darken(rgb(253, 65, 100), 2%),
-  ),
+  'default': rgb(255, 255, 255),
+  '-primary': trwl-theme-color('primary'),
+  '-success': trwl-theme-color('success'),
+  '-warning': trwl-theme-color('warning'),
+  '-danger': trwl-theme-color('danger'),
 ) !default;
 $cards--box-shadow: null !default;
 $cards--background: null !default;
