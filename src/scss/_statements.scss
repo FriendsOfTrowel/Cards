@@ -43,6 +43,14 @@ $card-block--selector: selector(set $card--selector element 'block');
   ('flex-grow', $card-block--flex-grow),
 ));
 
+#{print-selector($card-block--selector)} > *:first-child {
+  margin-top: 0;
+}
+
+#{print-selector($card-block--selector)} > *:last-child {
+  margin-bottom: 0;
+}
+
 
 $card-cover-wrapper--selector: selector(set $card--selector element 'cover-wrapper');
 
