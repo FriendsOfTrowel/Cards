@@ -1,5 +1,5 @@
-$cards--font-size: null !default;
-$cards--font-family: null !default;
+$cards--font-size: trwl-theme-size('md') !default;
+$cards--font-family: trwl-theme('font-family') !default;
 $cards--font-weight: null !default;
 $cards--text-transform: null !default;
 $cards--letter-spacing: null !default;
@@ -7,23 +7,20 @@ $cards--line-height: null !default;
 $cards--text-align: null !default;
 $cards--text-decoration: null !default;
 
-$cards--margin: 10px;
+$cards--margin: 0 0 2em;
 
-$cards--border-width: 1px;
-$cards--border-style: solid;
-$cards--border-color: (
-  'default': darken(rgb(255, 255, 255), 10%),
-  '-inverted': darken(rgb(31, 13, 51), 10%),
-);
-$cards--border-radius: 20px;
+$cards--border-width: trwl-theme('border-width');
+$cards--border-style: trwl-theme('border-style');
+$cards--border-color: trwl-theme-color('gray-medium');
+$cards--border-radius: trwl-theme('border-radius');
 
 $cards--color: (
-  'default': rgb(31, 13, 51),
+  'default': trwl-theme('gray-darker'),
   '-primary': rgb(255, 255, 255),
   '-success': rgb(255, 255, 255),
   '-danger': rgb(255, 255, 255),
   '-warning': rgb(255, 255, 255),
-  '-inverted': rgb(255,255,255),
+  '-inverted': rgb(255, 255, 255),
 );
 
 $cards--background-color: (
@@ -32,28 +29,24 @@ $cards--background-color: (
     ':hover': darken(rgb(255, 255, 255), 2%),
   ),
   '-primary': (
-    'default': rgb(31, 13, 51),
+    'default': trwl-theme-color('primary'),
     ':hover':  darken(rgb(31, 13, 51), 2%),
   ),
   '-success': (
-    'default': rgb(55, 211, 189),
+    'default': trwl-theme-color('success'),
     ':hover': darken(rgb(55, 211, 189), 2%),
   ),
   '-warning': (
-    'default': rgb(255, 176, 0),
+    'default': trwl-theme-color('warning'),
     ':hover': darken(rgb(255, 176, 0), 2%),
   ),
   '-danger': (
-    'default': rgb(253, 65, 100),
+    'default': trwl-theme-color('danger'),
     ':hover': darken(rgb(253, 65, 100), 2%),
-  ),
-  '-inverted': (
-    'default': rgb(31, 13, 51),
-    ':hover': darken(rgb(31, 13, 51), 2%),
   ),
 );
 
 $cards--box-shadow: null !default;
 $cards--background: null !default;
 
-$card-block--padding: 1rem;
+$card-block--padding: 1em;
