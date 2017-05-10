@@ -51,6 +51,19 @@
                             <p class="card__paragraph"><a href="#">Go somewhere</a></p>
                         {% endblock card_block_inner %}
                     {% endembed %}
+
+                    {% set options = {
+                        'cover': 'http://placehold.it/350x150',
+                        'modifiers': [theme],
+                        'href': '#',
+                    } %}
+
+                    {% embed '../../src/twig/card.html.twig' with options only %}
+                        {% block card_block_inner %}
+                            <h4 class="card__heading">Simple card</h4>
+                            <p class="card__paragraph">Card as simple panel</p>
+                        {% endblock card_block_inner %}
+                    {% endembed %}
                 </div>
            {% endfor %}
         </div>

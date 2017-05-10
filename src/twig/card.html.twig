@@ -7,6 +7,12 @@
 
 {% block card_wrapper %}
     <div class="card{{ modifiers_class }}">
+        {% block card_anchor %}
+            {% if href|default(false) %}
+                <a class="card__href" href="{{ href }}"></a>
+            {% endif %}
+        {% endblock card_anchor %}
+
         {% block card_inner %}
             {% block card_cover_wrapper %}
                 {% if cover|default(false) %}
