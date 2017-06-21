@@ -20,7 +20,7 @@ $cards--border-color: (
   '-danger': trwl-theme-color('danger'),
 ) !default;
 $cards--border-radius: trwl-theme('border-radius') !default;
-$cards--color: trwl-theme('gray-darker') !default;
+$cards--color: null !default;
 $cards--background-color: rgb(255, 255, 255) !default;
 $cards--box-shadow: null !default;
 $cards--background: null !default;
